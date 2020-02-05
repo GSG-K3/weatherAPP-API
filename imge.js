@@ -1,5 +1,5 @@
 let searchInput = document.getElementById("Enter-img");
-let searchResults = document.getElementById("result");
+let searchResults = document.getElementById("imgResult");
 
 
  
@@ -10,8 +10,8 @@ let searchResults = document.getElementById("result");
         let response = JSON.parse(xhr.responseText);
 
 
-        for (var i = 0; i < response.data.length; i++) {
-             let gif = response.data[i];
+        for (var i = 0; i < imgResponse.data.length; i++) {
+             let gif = imgResponse.data[i];
           let gifUrl = gif.images.fixed_height.url;
             //  let gifUrl = gif.images['480w_still'].url;   
              let img = document.createElement('img');
@@ -19,7 +19,7 @@ let searchResults = document.getElementById("result");
           img.src = gifUrl;
           // img.setAttribute('width', 250);
           // img.setAttribute('height', 200);
-          searchResults.appendChild(img);
+          imgResult.appendChild(img);
           img.setAttribute('id', imageId);
           console.log(gifUrl);
           
@@ -31,3 +31,5 @@ let searchResults = document.getElementById("result");
     // removeImage(gifUrl,result);
     searchResults.innerHTML = ""; 
   });
+
+  url2 =     'http://api.giphy.com/v1/gifs/search?q=' + cityName.value + '&limit=3' +'&api_key=PjePAILYBVdogMvZdg6PaRPNAQoLmbIX';
