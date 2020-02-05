@@ -7,10 +7,34 @@ const weatherStatus = document.getElementById("weatherStatus")
 const flag = document.getElementById("countryFlag");
 const humidity = document.getElementById("humidity");
 
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  }
+  function showPosition(position) {
+    window.lat = position.coords.latitude;
+    window.lon = position.coords.longitude;
+    console.log( window.lat); 
+    console.log( window.lon); 
+   searchF(); 
+    // window.alert("Location Acquired: lat:"+lat+" lng:"+lon);
+   
+   }
+
+
 search.addEventListener("click",searchF)
-    function searchF () {
+
+function searchF () {
+    
 
 event.preventDefault();
+if(city == ""){// && document.getElementById('city').style.visibility != 'visible'){
+	let link = 'https://api.openweathermap.org/data/2.5/weather?lat='+window.lat+'&lon='+window.lon+'139&units=metric&apikey=cf9fb4df751879d3f30929a3dd9050e4'
+    }
+   
 let url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city.value +'&units=metric&apikey=cf9fb4df751879d3f30929a3dd9050e4'
 
 
