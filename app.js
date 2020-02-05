@@ -29,6 +29,7 @@ function getLocation() {
 
    }
 
+
 search.addEventListener("click",searchF)
 
 
