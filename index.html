@@ -12,7 +12,7 @@
         <div class="input-div">
 <form>
 
-    <input type="text" name="country name"  id="countryName" class="search-field"><br>
+    <input type="text" name="country name" value = "" id="countryName" class="search-field"><br>
     <button class="submit" id="searchButton"> Get Weather </button>
 
 </form>
@@ -20,17 +20,22 @@
     </section>
 
     <section>
-<div class="weather-output">
-    <p>Temprature: &nbsp;<span id="weatherTemp"></span></p>
-   <span class="city-name" id="cityName"></span>
-   <p>Weather: &nbsp;<span id="weatherStatus"></span></p>
-   <p>Wind Speed: &nbsp;<span id="windSpeed"></span></p>
-   <p>Humidity: &nbsp;<span id="humidity"></span></p>
 
-   <img src="#" alt="countryFlag" id="countryFlag" />
-</div>
-
-</section>
-<script src="app.js"></script>
-</body>
-</html>
+        <div class="weather-output">
+            <p>Temprature: &nbsp;<span id="weatherTemp"></span></p>
+           <span class="city-name" id="cityName"></span>
+           <p>Weather: &nbsp;<span id="weatherStatus"></span></p>
+           <p>Wind Speed: &nbsp;<span id="windSpeed"></span></p>
+           <p>Humidity: &nbsp;<span id="humidity"></span></p>
+                  <img src="#" alt="countryFlag" id="countryFlag" />
+        
+        
+            <div class="col-md-4 col-sm-8"><img id="image" style="visibility: visible;" 
+                class="img-responsive" src=""></div>
+        
+                       </div>
+        
+        </section>
+        <script src="app.js"></script>
+        </body>
+        </html>
