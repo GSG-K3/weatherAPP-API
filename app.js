@@ -29,6 +29,7 @@ function getLocation() {
 
    }
 
+
 search.addEventListener("click",searchF)
 
 
@@ -77,6 +78,7 @@ xhr.send();
     humidity.innerText = (response.main.humidity + " %" )
     let flagLink = 'https://www.countryflags.io/'+country_code+'/shiny/64.png'
     weatherMain = response.weather[0].main;
+    flag.innerHTML = ""; 
 
     let flagImg = document.createElement('Img');
     flagImg.src = flagLink;
@@ -108,7 +110,7 @@ xhr.send();
      imgResult.appendChild(img);
     //  img.setAttribute('id', imageId);
      console.log(gifUrl);
-     
+
    }
 
    }
