@@ -14,7 +14,7 @@
 
 
 
- # User Journey
+
 
  
  # Definition of the project(weatherAPP-API) :
