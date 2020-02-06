@@ -19,7 +19,7 @@
  
  # Definition of the project(weatherAPP-API) :
  WeatherAPP-API use API tO get  picture from  gify website and use API TO get data weather form openweathermap
-  as a user you can start fist step and end second step .
+  as a user you can start first step and end second step .
   please  to get result you want  read  two steps.
  
  # step1:
