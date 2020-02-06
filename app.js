@@ -85,7 +85,7 @@ xhr.send();
     flag.appendChild(flagImg);
     console.log(flagImg.src)
 
-
+console.log(weatherMain)
     document.getElementById('image').src = weatherImg(weatherMain);
           
     url2 = 'http://api.giphy.com/v1/gifs/search?q=' + cityName.innerHTML + '&limit=3' +'&api_key=PjePAILYBVdogMvZdg6PaRPNAQoLmbIX'
@@ -103,8 +103,8 @@ xhr.send();
      let gifUrl = gif.images.fixed_height.url;
        //  let gifUrl = gif.images['480w_still'].url;   
         let img = document.createElement('img');
-
-     img.src = gifUrl;
+        img.setAttribute("id", "gif-img");
+        img.src = gifUrl;
      // img.setAttribute('width', 250);
      // img.setAttribute('height', 200);
      imgResult.appendChild(img);
@@ -140,6 +140,10 @@ console.log(weatherMain);
     else if(weather == "Thunderstorm"){
         return "animated/thunder.svg"		
     }
+    else if(weather == "Fog"){
+        return "animated/fog.svg"		
+    }
+
     return;
 
 }
